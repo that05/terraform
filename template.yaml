@@ -4,9 +4,7 @@ metadata:
   name: create-terraform-template
   title: Create terraform Template
   description: Create terraform modules for  project
-  tags:
-    - react
-    - cra
+  
 spec:
   owner: web@example.com
   type: website
