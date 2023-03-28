@@ -1,10 +1,12 @@
-apiVersion: backstage.io/v1beta3
+apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: create-terraform-template
-  title: Create terraform Template
-  description: Create terraform modules for  project
-  
+  title: Create Terraform Template
+  description: Create a new CRA website project
+  tags:
+    - react
+    - cra
 spec:
   owner: web@example.com
   type: website
@@ -44,10 +46,10 @@ spec:
               - github.com
   steps:
     - id: template
-      name: Fetch module + Template
+      name: Fetch Skeleton + Template
       action: fetch:template
       input:
-        url: ./module
+        url: ./skeleton
         copyWithoutRender:
           - .github/workflows/*
         values:
