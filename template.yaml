@@ -3,7 +3,7 @@ kind: Template
 # some metadata about the template itself
 metadata:
   name: "v1beta3-demo"
-  title: Test-Action-template
+  title: "Test-Action-template"
   description: "scaffolder-v1beta3-template-demo"
 spec:
   owner: backstage/techdocs-core
@@ -11,23 +11,23 @@ spec:
 
   # these are the steps which are rendered in the frontend with the form input
   parameters:
-    - title: Fill in some steps
+    - title: "Fill-in-some-steps"
       required:
         - name
       properties:
         name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: "Unique-name-of-the-component"
           ui:autofocus: true
           ui:options:
             rows: 5
-    - title: Choose a location
+    - title: "Choose-location"
       required:
         - repoUrl
       properties:
         repoUrl:
-          title: Repository Location
+          title: "Repository-Location"
           type: string
           ui:field: RepoUrlPicker
           ui:options:
@@ -40,7 +40,7 @@ spec:
       name: "Fetch-Base"
       action: fetch:template
       input:
-        url: ./template
+        url: ./skeleton
         values:
           name: ${{ parameters.name }}
 
