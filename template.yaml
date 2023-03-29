@@ -2,9 +2,9 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
-  name: v1beta3-demo
-  title: Test Action template
-  description: scaffolder v1beta3 template demo
+  name: "v1beta3-demo"
+  title: Test-Action-template
+  description: "scaffolder-v1beta3-template-demo"
 spec:
   owner: backstage/techdocs-core
   type: service
@@ -37,7 +37,7 @@ spec:
   # here's the steps that are executed in series in the scaffolder backend
   steps:
     - id: fetch-base
-      name: Fetch Base
+      name: "Fetch-Base"
       action: fetch:template
       input:
         url: ./template
@@ -45,7 +45,7 @@ spec:
           name: ${{ parameters.name }}
 
     - id: fetch-docs
-      name: Fetch Docs
+      name: "Fetch-Docs"
       action: fetch:plain
       input:
         targetPath: ./community
